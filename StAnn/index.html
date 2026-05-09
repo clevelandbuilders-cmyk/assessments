@@ -11,15 +11,16 @@
 body { font-family: 'DM Sans', sans-serif; background: #111009; color: #F4EFE0; min-height: 100vh; }
 
 /* HEADER */
-.site-header { background: #111009; border-bottom: 1px solid #2A2519; padding: 16px 20px; display: flex; align-items: center; gap: 14px; }
-.logo-circle { width: 48px; height: 48px; border-radius: 50%; background: #B8922A; display: flex; align-items: center; justify-content: center; font-family: ‘Playfair Display’, serif; font-size: 0.85rem; font-weight: 700; color: #111009; flex-shrink: 0; }
-.header-text { flex: 1; }
-.header-company { font-size: 0.78rem; color: #7A7260; }
-.header-doc { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: #B8922A; margin-top: 2px; }
+.site-header { background: #111009; border-bottom: 1px solid #2A2519; padding: 14px 20px; display: flex; align-items: baseline; justify-content: space-between; }
+.header-brand { font-family: ‘Playfair Display’, serif; font-size: 1rem; color: #B8922A; font-weight: 600; }
+.header-tagline { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: #7A7260; }
+.header-badge { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: #B8922A; border: 1px solid #6B5318; padding: 3px 8px; border-radius: 3px; }
 .gold-bar { height: 3px; background: linear-gradient(90deg, #B8922A, #D4AC48, #B8922A); }
 
 /* HERO */
 .hero { padding: 24px 20px 0; text-align: center; }
+.hero-pre { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #B8922A; margin-bottom: 10px; }
+.hero-disclaimer { font-size: 0.75rem; color: #7A7260; line-height: 1.6; margin-top: 14px; max-width: 580px; margin-left: auto; margin-right: auto; font-style: italic; }
 .hero-title { font-family: ‘Playfair Display’, serif; font-size: 1.9rem; color: #F4EFE0; line-height: 1.2; }
 .hero-sub { font-size: 0.82rem; color: #7A7260; margin-top: 6px; }
 .hero-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding-bottom: 20px; border-bottom: 1px solid #2A2519; justify-content: center; }
@@ -87,18 +88,18 @@ body { font-family: 'DM Sans', sans-serif; background: #111009; color: #F4EFE0; 
 </head>
 <body>
 
-<div class="gold-bar"></div>
 <div class="site-header">
-  <div class="logo-circle">M&amp;P</div>
-  <div class="header-text">
-    <div class="header-company">Meat &amp; Potatoes Carpentry LLC &nbsp;&middot;&nbsp; Waterford, WI</div>
-    <div class="header-doc">Pre-Quote Assessment</div>
-  </div>
+  <div class="header-brand">Meat &amp; Potatoes Carpentry</div>
+  <div class="header-tagline">ENHANCING SPACES, ELEVATING HOMES</div>
+  <div class="header-badge">PRE-QUOTE ASSESSMENT</div>
 </div>
+<div class="gold-bar"></div>
 
 <div class="hero">
+  <div class="hero-pre">Pre-Quote Assessment</div>
   <div class="hero-title">St. Anne Center</div>
   <div class="hero-sub">2801 East Morgan Avenue &nbsp;&middot;&nbsp; Milwaukee, WI &nbsp;&middot;&nbsp; Dayo Akande, COO &nbsp;&middot;&nbsp; (414) 552-1254</div>
+  <div class="hero-disclaimer">This document is a pre-quote field assessment only &mdash; not a final estimate or contract. It provides an itemized description of the proposed scope of work based on an initial site visit. Final pricing will be provided in a separate formal quote.</div>
   <div class="hero-chips">
     <span class="chip">LP SmartSide Lap Siding</span>
     <span class="chip">LP SmartSide Trim 1&times;4</span>
