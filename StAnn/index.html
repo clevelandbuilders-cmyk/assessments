@@ -19,14 +19,14 @@ body { font-family: 'DM Sans', sans-serif; background: #111009; color: #F4EFE0; 
 .gold-bar { height: 3px; background: linear-gradient(90deg, #B8922A, #D4AC48, #B8922A); }
 
 /* HERO */
-.hero { padding: 24px 20px 0; }
+.hero { padding: 24px 20px 0; text-align: center; }
 .hero-title { font-family: ‘Playfair Display’, serif; font-size: 1.9rem; color: #F4EFE0; line-height: 1.2; }
 .hero-sub { font-size: 0.82rem; color: #7A7260; margin-top: 6px; }
-.hero-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding-bottom: 20px; border-bottom: 1px solid #2A2519; }
+.hero-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding-bottom: 20px; border-bottom: 1px solid #2A2519; justify-content: center; }
 .chip { background: #1C1A12; border: 1px solid #3A3520; border-radius: 20px; padding: 5px 12px; font-size: 0.72rem; color: #D4AC48; }
 
 /* TABS */
-.tabs { display: flex; overflow-x: auto; border-bottom: 2px solid #2A2519; background: #111009; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.tabs { display: flex; overflow-x: auto; border-bottom: 2px solid #2A2519; background: #111009; -webkit-overflow-scrolling: touch; scrollbar-width: none; justify-content: center; }
 .tabs::-webkit-scrollbar { display: none; }
 .tab { padding: 14px 18px; font-size: 0.78rem; font-weight: 500; color: #7A7260; cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -2px; flex-shrink: 0; }
 .tab.active { color: #D4AC48; border-bottom-color: #B8922A; }
