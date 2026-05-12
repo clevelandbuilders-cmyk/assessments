@@ -26,20 +26,30 @@ const state = {
   unsubNotifs:   null,
 };
 
-/* ── Firebase init ───────────────────────────────────────────────────── */
-firebase.initializeApp(firebaseConfig);
-firebase.firestore().enablePersistence({ synchronizeTabs: true }).catch(() => {});
+/* ── Firebase init (skipped in demo mode) ────────────────────────────── */
+if (!window.DEMO_MODE) {
+  firebase.initializeApp(firebaseConfig);
+  firebase.firestore().enablePersistence({ synchronizeTabs: true }).catch(() => {});
+}
 
 /* ── Auth flow ───────────────────────────────────────────────────────── */
 Auth.init(onSignedIn, onSignedOut);
 
 async function onSignedIn(user) {
-  // Show app, hide auth screens
   $('loadingScreen').hidden = true;
   $('loginScreen').hidden   = true;
   $('app').hidden           = false;
 
-  // User button initials
+  // Show demo banner when not connected to Firebase
+  if (window.DEMO_MODE && !$('demoBanner')) {
+    const banner = document.createElement('div');
+    banner.id = 'demoBanner';
+    banner.style.cssText = 'background:#f59e0b;color:#000;text-align:center;font-size:13px;font-weight:500;padding:6px 16px;position:fixed;top:56px;left:0;right:0;z-index:99';
+    banner.textContent = '⚠️ Demo Mode — data is stored only on this device. Add your Firebase config to enable cloud sync.';
+    document.body.appendChild(banner);
+    document.querySelector('.layout').style.marginTop = '30px';
+  }
+
   const initials = (user.displayName || user.email || '?').charAt(0).toUpperCase();
   $('userBtn').textContent         = initials;
   $('userDisplayName').textContent = user.displayName || '';

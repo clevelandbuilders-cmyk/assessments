@@ -180,6 +180,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 }
 
 /* Upload progress */
+/* Demo mode badge on login card */
+.demo-badge {
+  background: #f59e0b; color: #000; font-size: 11px; font-weight: 700;
+  letter-spacing: .5px; text-transform: uppercase; padding: 3px 10px;
+  border-radius: 4px; display: inline-block; margin-bottom: 12px;
+}
+
 .upload-progress { margin-bottom: 16px; }
 .progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-bottom: 6px; }
 .progress-fill { height: 100%; background: var(--primary); border-radius: 3px; transition: width .2s; width: 0%; }

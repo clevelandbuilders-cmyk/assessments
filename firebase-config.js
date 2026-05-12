@@ -13,5 +13,10 @@ const firebaseConfig = {
   storageBucket:     "YOUR_PROJECT_ID.appspot.com",
   messagingSenderId: "YOUR_SENDER_ID",
   appId:             "YOUR_APP_ID",
-  vapidKey:          "YOUR_VAPID_KEY",  // Web Push VAPID key (for push notifications)
+  vapidKey:          "YOUR_VAPID_KEY",
 };
+
+// When Firebase hasn't been configured yet, the app runs in Demo Mode:
+// all data is stored locally on this device (IndexedDB + localStorage).
+// Replace the placeholder values above to switch to full cloud mode.
+window.DEMO_MODE = firebaseConfig.apiKey === 'YOUR_API_KEY';
