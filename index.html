@@ -8,18 +8,15 @@
 </head>
 <body>
 
-<!-- ── Loading Screen ───────────────────────────────────────────────────── -->
 <div id="loadingScreen" class="loading-screen">
   <div class="loading-logo">JobCam</div>
   <div class="spinner"></div>
 </div>
 
-<!-- ── Login Screen ─────────────────────────────────────────────────────── -->
 <div id="loginScreen" class="login-screen" hidden>
   <div class="login-card">
     <h1 class="login-logo">JobCam</h1>
     <p class="login-sub">Field photo management for your team</p>
-
     <div id="loginForm">
       <div class="form-group">
         <label>Email</label>
@@ -32,7 +29,6 @@
       <button class="btn btn-primary btn-full" id="signInBtn">Sign In</button>
       <button class="btn btn-ghost btn-full" id="showRegisterBtn">Create account</button>
     </div>
-
     <div id="registerForm" hidden>
       <div class="form-group">
         <label>Your Name</label>
@@ -49,12 +45,10 @@
       <button class="btn btn-primary btn-full" id="signUpBtn">Create Account</button>
       <button class="btn btn-ghost btn-full" id="showLoginBtn">Already have an account? Sign in</button>
     </div>
-
     <p id="authError" class="auth-error"></p>
   </div>
 </div>
 
-<!-- ── Main App ──────────────────────────────────────────────────────────── -->
 <div id="app" hidden>
   <header class="header">
     <div class="header-left">
@@ -79,7 +73,6 @@
     </div>
   </header>
 
-  <!-- Notifications Panel -->
   <div class="notif-panel" id="notifPanel" hidden>
     <div class="notif-panel-header">
       <span>Notifications</span>
@@ -97,14 +90,12 @@
       <ul class="job-list" id="jobList"></ul>
       <p class="sidebar-empty" id="sidebarEmpty" hidden>No jobs yet. Create one!</p>
     </aside>
-
     <main class="main" id="mainContent">
       <div class="empty-state" id="emptyState">
         <div class="empty-icon">&#128247;</div>
         <h2>Select a job or create a new one</h2>
         <p>Manage job photos, annotate images, and tag your team.</p>
       </div>
-
       <div class="job-view" id="jobView" hidden>
         <div class="job-header">
           <div>
@@ -117,7 +108,6 @@
             <button class="btn btn-danger" id="deleteJobBtn">Delete Job</button>
           </div>
         </div>
-
         <div class="photo-toolbar">
           <label class="btn btn-primary upload-label">
             <span>+ Add Photos</span>
@@ -128,13 +118,10 @@
             <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
           </label>
         </div>
-
-        <!-- Upload progress -->
         <div id="uploadProgress" class="upload-progress" hidden>
           <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
           <p id="progressLabel">Uploading...</p>
         </div>
-
         <div class="photo-grid" id="photoGrid"></div>
         <div class="drop-zone" id="dropZone"><p>Drop photos here</p></div>
       </div>
@@ -142,7 +129,6 @@
   </div>
 </div>
 
-<!-- ── Job Modal ─────────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="jobModal" hidden>
   <div class="modal">
     <h3 id="jobModalTitle">New Job</h3>
@@ -165,7 +151,6 @@
   </div>
 </div>
 
-<!-- ── Photo Annotator ───────────────────────────────────────────────────── -->
 <div class="modal-overlay fullscreen" id="photoModal" hidden>
   <div class="annotator">
     <div class="annotator-header">
@@ -196,12 +181,11 @@
       <canvas id="annotationCanvas"></canvas>
     </div>
     <div class="annotator-saving" id="annotatorSaving" hidden>
-      <div class="spinner spinner-sm"></div><span>Saving to cloud...</span>
+      <div class="spinner spinner-sm"></div><span>Saving...</span>
     </div>
   </div>
 </div>
 
-<!-- ── Tag Modal ─────────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="tagModal" hidden>
   <div class="modal">
     <h3>Tag a Team Member</h3>
@@ -228,7 +212,6 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging-compat.js"></script>
 
 <!-- App scripts -->
 <script src="firebase-config.js"></script>
